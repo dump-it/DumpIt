@@ -83,7 +83,7 @@ public class SignUp extends AppCompatActivity {
             reload();
         }
     }
-
+//
     private void createAccount(String email, String pw){
         mAuth.createUserWithEmailAndPassword(email, pw).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
