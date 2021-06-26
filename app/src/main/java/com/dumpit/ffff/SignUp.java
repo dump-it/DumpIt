@@ -84,7 +84,6 @@ public class SignUp extends AppCompatActivity {
         }
     }
 
-    //이메일 , 이름, 포인트, useruid,
     private void createAccount(String email, String pw){
         mAuth.createUserWithEmailAndPassword(email, pw).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
