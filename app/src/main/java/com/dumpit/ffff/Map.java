@@ -165,9 +165,6 @@ class PlaceAdapter extends BaseAdapter {
         mLayoutInflater = LayoutInflater.from(mContext);
     }
 
-    public void addItem(PlaceData item) {
-        data.add(item);
-    }
 
     @Override
     public int getCount() {

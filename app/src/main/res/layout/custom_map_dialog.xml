@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:orientation="vertical"
@@ -44,8 +44,8 @@
             android:id="@+id/address_dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/dream5"
             android:layout_weight="0"
+            android:fontFamily="@font/dream5"
             android:text="주소" />
     </LinearLayout>
 
@@ -76,8 +76,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="   전화걸기"
             android:fontFamily="@font/dream5"
+            android:text="   전화걸기"
             android:textColor="#009688"
             android:textSize="10sp" />
 
@@ -85,8 +85,9 @@
 
     <ImageView
         android:id="@+id/close_dialog"
-        android:layout_width="150dp"
+        android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/x" />
 

@@ -113,7 +113,7 @@ public class MarketItemClick extends AppCompatActivity {
                 } else {
                     isExist = true;
                     itemImage.setImageResource(itemI);
-                    itemPrice.setText(itemP + "원");
+                    itemPrice.setText(itemP + "P");
                 }
             }
             @Override
@@ -154,14 +154,14 @@ public class MarketItemClick extends AppCompatActivity {
                     //날짜 및 시간 형식 지정
                     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                     String time = simpleDateFormat.format(System.currentTimeMillis());
-                    // users - [id] - marketHistory - [시간] - [아이템 - 가격(원)] 형식으로 파베 저장
-                    mReference.child("users").child(id).child("marketHistory").child(time).setValue(itemN + " - " + itemP + "원");
+                    // users - [id] - marketHistory - [시간] - [아이템] 형식으로 파베 저장
                     mReference.child("users").child(id).child("Totalpoint").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             point = (int) dataSnapshot.getValue(Integer.class);
                             int p = point - itemP;
                             Toast.makeText(getApplicationContext(), "결제완료! 잔액:" + p + "원", Toast.LENGTH_SHORT).show();
+                            mReference.child("users").child(id).child("marketHistory").child(time).setValue(new BuyItem(itemN, itemP, p, time));
                             mReference.child("users").child(id).child("Totalpoint").setValue(p);
                         }
 

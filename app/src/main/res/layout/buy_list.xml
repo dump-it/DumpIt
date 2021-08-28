@@ -27,15 +27,16 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:layout_gravity="center">
+
         <ListView
             android:id="@+id/purchase_lists"
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text=""
-            android:textSize="15dp">
-        </ListView>
+            android:textSize="15dp"></ListView>
     </LinearLayout>
 </LinearLayout>
